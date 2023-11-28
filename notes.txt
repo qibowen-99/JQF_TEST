@@ -1,0 +1,22 @@
+build JQF
+git clone https://github.com/rohanpadhye/jqf
+cd jqf
+mvn package
+
+compile with class: 
+javac -cp .:$(scripts/classpath.sh) SimpleTest.java
+
+fuzz test: 
+bin/jqf-random SimpleTest testSimpleTest 10
+
+modify BranchEvent.java 
+public BranchEvent(int iid, MemberRef containingMethod, int lineNumber, int arm)
+for task3
+
+modify NoGuidance.java 
+public InputStream getInput() 
+for 4.1
+
+modify ThreadTracer.java
+protected final void emit(TraceEvent e)
+for 4.2
