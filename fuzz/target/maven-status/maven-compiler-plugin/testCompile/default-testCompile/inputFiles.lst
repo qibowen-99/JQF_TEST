@@ -1,7 +1,0 @@
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/util/CountersTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/ei/ExecutionIndexingTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/afl/RedundancyTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/util/NonZeroCachingCountersTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/util/CoverageTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/ei/ExecutionIndexingGuidanceTest.java
-/Users/qbw/Desktop/CS182/JQF_TEST/fuzz/src/test/java/edu/berkeley/cs/jqf/fuzz/guidance/GuidanceTest.java
