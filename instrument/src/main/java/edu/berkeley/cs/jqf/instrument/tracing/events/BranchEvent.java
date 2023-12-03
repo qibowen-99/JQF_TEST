@@ -48,8 +48,12 @@ public class BranchEvent extends TraceEvent {
     public BranchEvent(int iid, MemberRef containingMethod, int lineNumber, int arm) {
         super(iid, containingMethod, lineNumber);
         this.arm = arm;
-        if (Running.running == 1){
-            System.out.println("Event ID: " + iid + ", branch arm: " + arm + ".");
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        for (StackTraceElement ste : stackTrace) {
+            if (ste.getMethodName().equals("checkEven") || ste.getMethodName().equals("checkGreaterThanHundred")) {
+                System.out.println("Event ID: " + iid + ", branch arm: " + arm + ".");
+                break;
+            }
         }
     }
 

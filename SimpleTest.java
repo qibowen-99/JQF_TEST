@@ -1,7 +1,6 @@
 import edu.berkeley.cs.jqf.fuzz.Fuzz;
 import edu.berkeley.cs.jqf.fuzz.JQF;
 import org.junit.runner.RunWith;
-import edu.berkeley.cs.jqf.instrument.tracing.Running;
 
 @RunWith(JQF.class)
 public class SimpleTest {
@@ -22,13 +21,11 @@ public class SimpleTest {
 
     @Fuzz
     public void testSimpleTest(Integer a) {
-        Running.running = 1;
         int valueOfA = a & 0xFF;
         System.out.println("------ Generated input: " + valueOfA + " ------");
 
         checkEven(valueOfA);
 
         checkGreaterThanHundred(valueOfA);
-        Running.running = 0;
     }
 }

@@ -123,10 +123,14 @@ public class ThreadTracer {
      */
     protected final void emit(TraceEvent e) {
         try {
-            if (Running.running == 1){
-                System.out.println("Thread " + tracee.getName() + " produced an event " + e.toString());
-                if (e.toString().contains("RET")){
-                    System.out.println();
+            StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+            for (StackTraceElement ste : stackTrace) {
+                if (ste.getMethodName().equals("checkEven") || ste.getMethodName().equals("checkGreaterThanHundred")) {
+                    System.out.println("Thread " + tracee.getName() + " produced an event " + e.toString());
+                    if (e.toString().contains("RET")){
+                        System.out.println();
+                    }
+                    break;
                 }
             }
             callback.accept(e);
